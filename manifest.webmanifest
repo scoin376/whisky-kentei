@@ -1,0 +1,21 @@
+{
+  "name": "ウイスキー検定1級 毎日問題",
+  "short_name": "ウイスキー検定1級",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#171717",
+  "theme_color": "#171717",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
