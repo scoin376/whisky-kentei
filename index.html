@@ -3,9 +3,13 @@
 <meta name="theme-color" content="#171717"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="ウイスキー検定1級">
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><title>ウイスキー検定1級｜毎日問題</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#f4f1eb;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}header{position:sticky;top:0;z-index:10;background:#171717;color:#fff;padding:13px 16px;box-shadow:0 2px 8px #0002}header h1{font-size:18px;margin:0 0 4px}header p{font-size:12px;margin:0;color:#ddd}main{max-width:720px;margin:auto;padding:14px}.tabs{display:flex;gap:8px;overflow:auto;padding:2px 0 12px;position:sticky;top:61px;z-index:9;background:#f4f1eb}.tab{flex:0 0 auto;border:1px solid #d7d2cb;background:#fff;border-radius:999px;padding:9px 13px;font-weight:700}.tab.active{background:#222;color:#fff}.day{display:none}.day.active{display:block}.day-title{background:#fff;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 2px 12px #00000012}.day-title h2{font-size:18px;margin:0 0 5px}.day-title p{margin:0;color:#666;font-size:13px}.question{background:#fff;border-radius:16px;padding:18px;margin:0 0 22px;box-shadow:0 2px 12px #00000012}.meta{font-size:13px;color:#8b5e34;font-weight:700}.meta span{float:right;background:#eee5da;padding:4px 8px;border-radius:999px}h3{font-size:17px;line-height:1.65;margin:14px 0}.options{display:grid;gap:9px}.opt{border:1px solid #d7d2cb;background:#fff;border-radius:10px;padding:11px;text-align:left;font-size:15px}.opt.selected{outline:2px solid #8b5e34}.opt.correct{background:#e7f5e9;border-color:#4d9a5a}.opt.wrong{background:#fde8e8;border-color:#c44}.answer-btn{margin-top:18px;width:100%;border:0;border-radius:12px;padding:12px;background:#222;color:#fff;font-weight:700;font-size:15px}.explanation{margin-top:12px;padding:13px;border-radius:10px;background:#f7f2eb;line-height:1.7;font-size:14px}.result{margin-top:10px;font-weight:700}.empty{padding:20px;background:#fff;border-radius:14px;line-height:1.7}
+*{box-sizing:border-box}body{margin:0;background:#f4f1eb;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}header{position:sticky;top:0;z-index:10;background:#171717;color:#fff;padding:13px 16px;box-shadow:0 2px 8px #0002}header h1{font-size:18px;margin:0 0 4px}header p{font-size:12px;margin:0;color:#ddd}main{max-width:720px;margin:auto;padding:14px}.tabs{display:flex;gap:8px;overflow:auto;padding:2px 0 12px;position:sticky;top:61px;z-index:9;background:#f4f1eb}.tab{flex:0 0 auto;border:1px solid #d7d2cb;background:#fff;border-radius:999px;padding:9px 13px;font-weight:700}.tab.active{background:#222;color:#fff}.day{display:none}.day.active{display:block}.day-title{background:#fff;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 2px 12px #00000012}.day-title h2{font-size:18px;margin:0 0 5px}.day-title p{margin:0;color:#666;font-size:13px}.question{background:#fff;border-radius:16px;padding:18px;margin:0 0 22px;box-shadow:0 2px 12px #00000012}.meta{font-size:13px;color:#8b5e34;font-weight:700}.meta span{float:right;background:#eee5da;padding:4px 8px;border-radius:999px}h3{font-size:17px;line-height:1.65;margin:14px 0}.options{display:grid;gap:9px}.opt{border:1px solid #d7d2cb;background:#fff;border-radius:10px;padding:11px;text-align:left;font-size:15px}.opt.selected{outline:2px solid #8b5e34}.opt.correct{background:#e7f5e9;border-color:#4d9a5a}.opt.wrong{background:#fde8e8;border-color:#c44}.answer-btn{margin-top:18px;width:100%;border:0;border-radius:12px;padding:12px;background:#222;color:#fff;font-weight:700;font-size:15px}.explanation{margin-top:12px;padding:13px;border-radius:10px;background:#f7f2eb;line-height:1.7;font-size:14px}.result{margin-top:10px;font-weight:700}.empty{padding:20px;background:#fff;border-radius:14px;line-height:1.7}.archive-card{width:100%;display:grid;grid-template-columns:1fr auto;gap:4px 12px;text-align:left;border:0;background:#fff;border-radius:14px;padding:16px;margin:0 0 10px;box-shadow:0 2px 12px #00000012}.archive-card strong{font-size:16px}.archive-card span{font-size:13px;color:#666}.archive-card b{grid-column:2;grid-row:1/3;align-self:center;color:#8b5e34}.archive-back{border:0;background:#222;color:#fff;border-radius:10px;padding:10px 14px;margin:0 0 12px;font-weight:700}
 </style></head><body><header><h1>🥃 ウイスキー検定1級対策</h1><p>毎日追加・過去問保存型｜答えは「答えを見る」で表示</p></header><main>
-<div class="tabs"><button class="tab" data-day="day-2026-09-20">9/20 初回70問</button><button class="tab active" data-day="day-2026-09-23">9/23 新規70問</button><button class="tab wrong-tab" data-day="wrong-review">❌ 間違えた問題 <span id="wrong-count">0</span></button></div>
+<div class="tabs">
+<button class="tab active" data-view="today">🥃 今日の問題</button>
+<button class="tab" data-view="archive">📚 過去の配信</button>
+<button class="tab" data-view="wrong">❌ 間違えた問題 <span id="wrong-count">0</span></button>
+</div>
 <section class="day" id="day-2026-09-20"><div class="day-title"><h2>📅 2026年9月20日</h2><p>初回セット｜全70問</p></div><section class="question" data-index="1" data-qnum="1">
 <div class="meta">1/70<span>カナディアン</span></div>
 <h2>カナディアンウイスキーで、伝統的にライ麦由来のフレーバーを持つ酒質を指して使われることが多い表現はどれ？</h2>
@@ -567,6 +571,10 @@
 <div class="explanation" hidden=""><strong>正解：A. 蒸留でアルコールだけを完全に分離できるわけではない</strong><br/>蒸留ではアルコールだけでなく多くの揮発成分も一緒に移動し、カットで酒質を調整する。</div>
 </section></section>
 <section class="day active" id="day-2026-09-23"><div class="day-title"><h2>📅 2026年9月23日</h2><p>新規セット｜全70問</p></div><div id="today-questions"><div class="empty">問題を読み込んでいます…</div></div></section>
+<section class="day" id="archive-review">
+<div class="day-title"><h2>📚 過去の配信</h2><p>日付を選ぶと、その日の70問をいつでも解き直せます。</p></div>
+<div id="archive-list"></div>
+</section>
 <section class="day" id="wrong-review"><div class="day-title"><h2>❌ 間違えた問題</h2><p>一度間違えた問題を、もう一度解き直せます。正解できた問題は自動的に一覧から外れます。</p></div><div id="wrong-list"></div><div class="empty" id="wrong-empty">まだ間違えた問題はありません。まずは今日の問題に挑戦しよう！💪🥃</div></section><div class="empty" id="future-note" style="display:none">新しい日の問題はここに追加されます。過去の問題は残ります。😊</div>
 </main><script>
 const WRONG_KEY='whisky-kentei-wrong-v2';
@@ -616,10 +624,41 @@ async function loadDailySet(){
     initQuestions(root); updateWrongReview();
   }catch(e){document.getElementById('today-questions').innerHTML='<div class="empty">今日の問題を読み込めませんでした。GitHubのセットを確認してください。</div>';console.error(e)}
 }
+function showView(view){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.day').forEach(d=>d.classList.remove('active'));
+  const tab=document.querySelector('.tab[data-view="'+view+'"]'); if(tab)tab.classList.add('active');
+  if(view==='today')document.getElementById('day-2026-09-23').classList.add('active');
+  else if(view==='archive'){buildArchive(); document.getElementById('archive-review').classList.add('active');}
+  else {updateWrongReview(); document.getElementById('wrong-review').classList.add('active');}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function buildArchive(){
+  const list=document.getElementById('archive-list'); list.innerHTML='';
+  const days=[...document.querySelectorAll('.day')].filter(d=>d.id!=='archive-review'&&d.id!=='wrong-review');
+  days.sort((a,b)=>b.id.localeCompare(a.id));
+  days.forEach(day=>{
+    const title=day.querySelector('.day-title h2')?.textContent?.trim()||day.id;
+    const desc=day.querySelector('.day-title p')?.textContent?.trim()||'';
+    const count=day.querySelectorAll('.question').length;
+    const btn=document.createElement('button'); btn.className='archive-card';
+    btn.innerHTML='<strong>'+title.replace('📅 ','')+'</strong><span>'+desc+' · '+(count||70)+'問</span><b>開く ›</b>';
+    btn.addEventListener('click',()=>showArchiveDay(day.id));
+    list.appendChild(btn);
+  });
+  if(!days.length)list.innerHTML='<div class="empty">まだ過去の配信はありません。</div>';
+}
+function showArchiveDay(id){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.day').forEach(d=>d.classList.remove('active'));
+  const day=document.getElementById(id); if(day)day.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  const back=document.createElement('button'); back.className='archive-back'; back.textContent='‹ 過去の配信一覧へ';
+  back.onclick=()=>showView('archive');
+  const existing=day.querySelector('.archive-back'); if(existing)existing.remove();
+  day.insertBefore(back,day.firstChild);
+}
 initQuestions(document); updateWrongReview(); loadDailySet();
-document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active')); document.querySelectorAll('.day').forEach(d=>d.classList.remove('active'));
-  tab.classList.add('active'); document.getElementById(tab.dataset.day).classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); if(tab.dataset.day==='wrong-review')updateWrongReview();
-}));
+document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>showView(tab.dataset.view)));
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js'));
 </script></body></html>
